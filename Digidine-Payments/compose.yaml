@@ -1,4 +1,18 @@
 services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_payments
+    restart: always
+    environment:
+      MYSQL_DATABASE: payments
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: admin
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
   rabbitmq:
     image: 'rabbitmq:latest'
     environment:
@@ -6,3 +20,6 @@ services:
       - 'RABBITMQ_DEFAULT_USER=myuser'
     ports:
       - '5672'
+
+volumes:
+  mysql_data:

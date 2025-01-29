@@ -1,0 +1,11 @@
+C:\FIAP\Payments\Digidine-Payments\Digidine-Payments\src\main\java\com\fiap\digidine\config\RabbitmqConfig.java
+C:\FIAP\Payments\Digidine-Payments\Digidine-Payments\src\main\java\com\fiap\digidine\controller\PaymentsController.java
+C:\FIAP\Payments\Digidine-Payments\Digidine-Payments\src\main\java\com\fiap\digidine\DigidineApplication.java
+C:\FIAP\Payments\Digidine-Payments\Digidine-Payments\src\main\java\com\fiap\digidine\model\enums\PaymentMethod.java
+C:\FIAP\Payments\Digidine-Payments\Digidine-Payments\src\main\java\com\fiap\digidine\model\enums\PaymentStatus.java
+C:\FIAP\Payments\Digidine-Payments\Digidine-Payments\src\main\java\com\fiap\digidine\model\Payment.java
+C:\FIAP\Payments\Digidine-Payments\Digidine-Payments\src\main\java\com\fiap\digidine\repository\PaymentsRepository.java
+C:\FIAP\Payments\Digidine-Payments\Digidine-Payments\src\main\java\com\fiap\digidine\service\PaymentsService.java
+C:\FIAP\Payments\Digidine-Payments\Digidine-Payments\src\main\java\com\fiap\digidine\service\PaymentsServiceImpl.java
+C:\FIAP\Payments\Digidine-Payments\Digidine-Payments\src\main\java\com\fiap\digidine\swagger\implementation\OpenAPIConfig.java
+C:\FIAP\Payments\Digidine-Payments\Digidine-Payments\src\main\java\com\fiap\digidine\swagger\implementation\SecurityConfiguration.java
