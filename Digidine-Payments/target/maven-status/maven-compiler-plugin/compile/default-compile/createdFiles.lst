@@ -1,9 +1,9 @@
 com\fiap\digidine\model\enums\PaymentStatus.class
 com\fiap\digidine\DigidineApplication.class
+com\fiap\digidine\model\PaymentRequest.class
 com\fiap\digidine\controller\PaymentsController.class
 com\fiap\digidine\config\RabbitmqConfig.class
 com\fiap\digidine\repository\PaymentsRepository.class
-com\fiap\digidine\swagger\implementation\SecurityConfiguration.class
 com\fiap\digidine\service\PaymentsService.class
 com\fiap\digidine\swagger\implementation\OpenAPIConfig.class
 com\fiap\digidine\model\enums\PaymentMethod.class
