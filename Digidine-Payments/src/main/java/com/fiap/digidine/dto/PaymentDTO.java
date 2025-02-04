@@ -1,38 +1,14 @@
-package com.fiap.digidine.model;
-
-import com.fiap.digidine.model.enums.PaymentMethod;
-import com.fiap.digidine.model.enums.PaymentStatus;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+package com.fiap.digidine.dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+public class PaymentDTO {
 
-@NoArgsConstructor(force = true)
-@Entity
-public class Payment {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
     private Long orderNumber;
     private double amount;
     private LocalDateTime createdAt;
     private String status;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public Long getOrderNumber() {
         return orderNumber;
@@ -65,5 +41,4 @@ public class Payment {
     public void setStatus(String status) {
         this.status = status;
     }
-
 }

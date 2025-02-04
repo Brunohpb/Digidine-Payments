@@ -1,5 +1,6 @@
 package com.fiap.digidine.controller;
 
+import com.fiap.digidine.dto.PaymentDTO;
 import com.fiap.digidine.model.Payment;
 import com.fiap.digidine.model.PaymentRequest;
 import com.fiap.digidine.service.PaymentsService;
@@ -25,7 +26,7 @@ public class PaymentsController {
     }
 
     @PostMapping
-    public Payment processPayment(@RequestBody PaymentRequest paymentRequest) {
+    public PaymentDTO processPayment(@RequestBody PaymentRequest paymentRequest) {
         return paymentsService.processPayment(paymentRequest);
     }
 

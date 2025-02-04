@@ -20,14 +20,15 @@ spring:
 
   rabbitmq:
     host: localhost
-    port: 5672
-    username: myuser
-    password: secret
 
 digidine:
   broker:
     exchange:
+      paymentNotificationExchange: digidine.payment.notification
       orderNotificationExchange: digidine.order.notification
     key:
+      paymentNotificationKey: ms.payment.notification
       orderNotificationKey: ms.order.notification
-    queue: digidine.order.notification.queue
+    queue:
+      payment: digidine.payment.notification.queue
+      order: digidine.order.notification.queue

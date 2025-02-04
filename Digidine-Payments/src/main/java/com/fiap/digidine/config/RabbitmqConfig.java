@@ -17,11 +17,17 @@ public class RabbitmqConfig {
     @Autowired
     private CachingConnectionFactory cachingConnectionFactory;
 
-    @Value(value = "${digidine.broker.queue}")
+    @Value(value = "${digidine.broker.queue.order}")
     private String orderNotificationQueue;
+
+    @Value(value = "${digidine.broker.queue.payment}")
+    private String paymentNotificationQueue;
 
     @Value(value = "${digidine.broker.key.orderNotificationKey}")
     private String orderNotificationKey;
+
+    @Value(value = "${digidine.broker.key.paymentNotificationKey}")
+    private String paymentNotificationKey;
 
     @Bean
     public RabbitTemplate rabbitTemplate() {
@@ -42,18 +48,33 @@ public class RabbitmqConfig {
         return new TopicExchange("digidine.order.notification");
     }
 
-    // Declara a fila
+    @Bean
+    public TopicExchange paymentNotificationExchange() {
+        return new TopicExchange("digidine.payment.notification");
+    }
+
     @Bean
     public Queue orderNotificationQueue() {
         return new Queue(orderNotificationQueue, true);
     }
 
-    // Declara o binding entre a exchange e a fila com a routing key
     @Bean
-    public Binding binding() {
+    public Queue paymentNotificationQueue() {
+        return new Queue(paymentNotificationQueue, true);
+    }
+
+    @Bean
+    public Binding orderBinding() {
         return BindingBuilder.bind(orderNotificationQueue())
                 .to(orderNotificationExchange())
                 .with(orderNotificationKey);
+    }
+
+    @Bean
+    public Binding paymentBinding() {
+        return BindingBuilder.bind(paymentNotificationQueue())
+                .to(paymentNotificationExchange())
+                .with(paymentNotificationKey);
     }
 }
 
