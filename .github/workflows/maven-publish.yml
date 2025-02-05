@@ -23,8 +23,10 @@ jobs:
       run: java -version
 
     - name: Build the project
-      run: mvn clean install
-      # run: mvn clean install -DskipTests
+      run: |
+          cd digidine-payments
+          mvn clean install
+          # mvn clean install -DskipTests
 
     - name: SonarCloud
       uses: sonarsource/sonarcloud-github-action@master
