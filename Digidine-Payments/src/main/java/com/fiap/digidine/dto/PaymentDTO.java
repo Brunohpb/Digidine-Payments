@@ -10,6 +10,16 @@ public class PaymentDTO {
     private LocalDateTime createdAt;
     private String status;
 
+    public PaymentDTO(Long orderNumber, double amount, String status) {
+        this.orderNumber = orderNumber;
+        this.amount = amount;
+        this.status = status;
+    }
+
+    public PaymentDTO() {
+
+    }
+
     public Long getOrderNumber() {
         return orderNumber;
     }
