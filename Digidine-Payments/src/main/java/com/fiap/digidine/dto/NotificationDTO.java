@@ -7,7 +7,6 @@ public record NotificationDTO (
         HttpStatus httpStatus,
         PaymentDTO paymentDTO)
 {
-
     public NotificationDTO(String message, HttpStatus httpStatus, PaymentDTO paymentDTO) {
         this.message = message;
         this.httpStatus = httpStatus;
