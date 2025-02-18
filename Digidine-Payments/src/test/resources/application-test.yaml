@@ -7,9 +7,13 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update  # Ou 'create-drop' para recriar o schema a cada execução de teste
     show-sql: true
   h2:
     console:
       enabled: true
       path: /h2-console
+  sql:
+    init:
+      mode: always  # Garante que o Spring sempre execute os scripts
+      schema-locations: classpath:schema.sql  # Localização do schema.sql
