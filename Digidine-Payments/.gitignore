@@ -1,0 +1,77 @@
+### Arquivos e diretórios gerados pelo Spring Boot ###
+/target/
+/.mvn/
+/.gradle/
+/.idea/
+/.settings/
+/.classpath
+/.project
+/.springBeans
+/.sts4-cache/
+/bin/
+/build/
+/out/
+/logs/
+*.log
+*.log.*
+
+
+### Arquivos de IDE ###
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*.swo
+
+### Arquivos de sistema operacional ###
+.DS_Store
+Thumbs.db
+
+### Dependências e builds ###
+/target/
+/.mvn/wrapper/maven-wrapper.jar
+/.gradle/
+/build/
+/libs/
+dependency-reduced-pom.xml
+
+### Arquivos de teste ###
+/test-output/
+/test-results/
+/target/surefire-reports/
+/target/failsafe-reports/
+
+### Arquivos de cobertura de código ###
+/target/jacoco.exec
+/target/jacoco-reports/
+/target/site/jacoco/
+
+### Arquivos de ambiente virtual ###
+.env
+.venv/
+venv/
+env/
+
+### Outros arquivos temporários ###
+*.tmp
+*.bak
+*.orig
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Arquivos de banco de dados local ###
+*.db
+*.sqlite
+*.h2.db
+
+### Arquivos de cache ###
+.cache/
+node_modules/
+bower_components/
