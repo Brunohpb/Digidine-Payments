@@ -1,5 +1,6 @@
 package com.fiap.digidine.integration.listener;
 
+import com.fiap.digidine.dto.NotificationOrderResponseDTO;
 import com.fiap.digidine.dto.OrderResponseDTO;
 import com.fiap.digidine.dto.PaymentDTO;
 import com.fiap.digidine.listener.OrderListener;
@@ -33,9 +34,14 @@ public class OrderListenerTest {
 
     @Test
     public void testReceiveOrder_Success() {
+
+        NotificationOrderResponseDTO responseDTO = new NotificationOrderResponseDTO();
+
         OrderResponseDTO order = new OrderResponseDTO();
         order.setOrderNumber(123L);
         order.setTotalPrice(250.00);
+
+        responseDTO.setOrderResponseDTO(order);
 
         PaymentDTO paymentDTO = new PaymentDTO();
         paymentDTO.setOrderNumber(123L);
@@ -45,7 +51,7 @@ public class OrderListenerTest {
 
         when(paymentsService.processPayment(any(PaymentRequest.class))).thenReturn(paymentDTO);
 
-        orderListener.receiveOrder(order);
+        orderListener.receiveOrder(responseDTO);
 
         verify(paymentsService, times(1)).processPayment(any(PaymentRequest.class));
 

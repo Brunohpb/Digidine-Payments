@@ -1,5 +1,7 @@
 package com.fiap.digidine.dto;
 
+import com.fiap.digidine.model.enums.OrderStatus;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -9,7 +11,7 @@ public class OrderResponseDTO {
     private CustomerRequestDTO customer;
     private List<ProductRequestDTO> products;
     private double totalPrice;
-    private String orderStatus;
+    private OrderStatus orderStatus;
     private LocalDateTime createdAt;
 
     public Long getOrderNumber() {
@@ -44,11 +46,11 @@ public class OrderResponseDTO {
         this.totalPrice = totalPrice;
     }
 
-    public String getOrderStatus() {
+    public OrderStatus getOrderStatus() {
         return orderStatus;
     }
 
-    public void setOrderStatus(String orderStatus) {
+    public void setOrderStatus(OrderStatus orderStatus) {
         this.orderStatus = orderStatus;
     }
 

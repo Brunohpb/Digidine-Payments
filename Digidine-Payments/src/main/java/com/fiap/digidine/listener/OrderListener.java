@@ -1,5 +1,6 @@
 package com.fiap.digidine.listener;
 
+import com.fiap.digidine.dto.NotificationOrderResponseDTO;
 import com.fiap.digidine.dto.OrderResponseDTO;
 import com.fiap.digidine.dto.PaymentDTO;
 import com.fiap.digidine.model.PaymentRequest;
@@ -18,9 +19,10 @@ public class OrderListener {
     PaymentsService paymentsService;
 
     @RabbitListener(queues = "${digidine.broker.queue.order}")
-    public void receiveOrder(OrderResponseDTO order) {
-        System.out.println("Received order: " + order);
+    public void receiveOrder(NotificationOrderResponseDTO response) {
+        System.out.println("Received order: " + response);
 
+        OrderResponseDTO order = response.getOrderResponseDTO();
         PaymentRequest payment = new PaymentRequest();
         payment.setOrderNumber(order.getOrderNumber());
         payment.setTotalPrice(order.getTotalPrice());
